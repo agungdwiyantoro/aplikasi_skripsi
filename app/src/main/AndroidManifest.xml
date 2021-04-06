@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.agung.PPK_UNY_Mobile">
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+
+    <application
+        android:name="com.example.agung.PPK_UNY_Mobile.Application_class"
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/logo_aplikasi"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo_aplikasi"
+        android:supportsRtl="true"
+        android:testOnly="false"
+        android:theme="@style/AppTheme">
+        <!--
+               Set to true if your app is Standalone, that is, it does not require the handheld
+               app to run.
+
+        <uses-library
+            android:name="com.google.android.wearable"
+            android:required="true" />
+        <meta-data
+            android:name="com.google.android.wearable.standalone"
+            android:value="true" />
+        -->
+        <!--
+        <activity
+            android:name=".about"
+            android:label="@string/title_activity_about">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <!--
+        <meta-data
+            android:name="com.google.apis:google-api-services-drive"
+            android:value="v3-rev136-1.25.0" />
+        <meta-data
+            android:name="com.google.android.apps.drive.APP_ID"
+            android:value="457901691142-je9rdc7od7vdgksmfqedr0f76rppm2ig.apps.googleusercontent.com" />
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/logo" />
+        <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/base_color" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/logo" />
+        <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <activity
+            android:name="com.example.agung.PPK_UNY_Mobile.MainActivity"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.agung.PPK_UNY_Mobile.webview" />
+        <activity android:name="com.example.agung.PPK_UNY_Mobile.BaseActivity" />
+        <activity android:name="com.example.agung.PPK_UNY_Mobile.login" />
+        <activity android:name="com.example.agung.PPK_UNY_Mobile.fragments.profile.settings" />
+        <activity android:name="com.example.agung.PPK_UNY_Mobile.fragments.profile.cv_resume.uploadResume" />
+        <activity android:name="com.example.agung.PPK_UNY_Mobile.lowongan" />
+        <activity android:name="com.example.agung.PPK_UNY_Mobile.guessAdapters.guessMyJob" />
+        <activity android:name="com.example.agung.PPK_UNY_Mobile.signUp" />
+        <activity android:name="com.example.agung.PPK_UNY_Mobile.applied_jobs" />
+        <activity android:name="com.example.agung.PPK_UNY_Mobile.fragments.profile.about" />
+        <activity
+            android:name="com.example.agung.PPK_UNY_Mobile.fragments.profile.cv_resume.resumeProfile"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.example.agung.PPK_UNY_Mobile.fragments.profile.tracerStudy" />
+        <activity android:name="com.example.agung.PPK_UNY_Mobile.unused.IKARegistration" />
+        <activity android:name="com.example.agung.PPK_UNY_Mobile.uploadDiploma" />
+        <activity android:name="com.example.agung.PPK_UNY_Mobile.companiesJobs.jobsCompaniesJob" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.agung.PPK_UNY_Mobile.dropbox.FilesActivity" />
+        <activity
+            android:name="com.dropbox.core.android.AuthActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask">
+            <intent-filter>
+
+                <!-- Change this to be db- followed by your app key -->
+                <data android:scheme="db-kyaule74059mtvi" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.agung.PPK_UNY_Mobile.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <service
+            android:name="com.example.agung.PPK_UNY_Mobile.services.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

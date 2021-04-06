@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/base_color"
+    android:id="@+id/constraint_layout"
+    >
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/kontak_kami"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginBottom="0dp"/>
+
+
+    <TextView
+        android:id="@+id/kontak_kami"
+        style="@style/bigFontWhite"
+        android:text="@string/kontak_kami"
+
+
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintStart_toStartOf="@+id/logo"
+        app:layout_constraintBottom_toTopOf="@+id/pusat_pengembangan_karir_uny"/>
+
+    <TextView
+        android:id="@+id/pusat_pengembangan_karir_uny"
+        style="@style/bigFontWhite"
+        android:text="@string/pusat_pengembangan_karir"
+
+        android:textStyle="bold"
+
+        app:layout_constraintTop_toBottomOf="@+id/kontak_kami"
+        app:layout_constraintStart_toStartOf="@+id/logo"
+        app:layout_constraintBottom_toTopOf="@+id/gedung_lppmp"/>
+
+    <View
+        android:id="@+id/border_line"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/white"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+
+        app:layout_constraintStart_toStartOf="@+id/logo"
+        app:layout_constraintEnd_toEndOf="@+id/logo"
+        app:layout_constraintTop_toBottomOf="@+id/pusat_pengembangan_karir_uny"
+        app:layout_constraintBottom_toTopOf="@+id/gedung_lppmp"/>
+
+    <TextView
+        android:id="@+id/gedung_lppmp"
+        style="@style/normalFontWhite"
+        android:text="@string/gedung_lppmp"
+
+        android:drawableStart="@drawable/google_maps"
+        android:drawableEnd="@drawable/foreign"
+        android:drawablePadding="5dp"
+        android:layout_width="0dp"
+        android:textStyle="normal"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/pusat_pengembangan_karir_uny"
+        app:layout_constraintStart_toStartOf="@+id/logo"
+        app:layout_constraintEnd_toEndOf="@+id/logo"
+        app:layout_constraintBottom_toTopOf="@+id/t1"/>
+
+    <TextView
+        android:id="@+id/t1"
+        style="@style/normalFontWhite"
+        android:text="@string/T1"
+
+        android:layout_width="0dp"
+        android:textStyle="normal"
+        android:layout_marginTop="10dp"
+        android:drawableStart="@drawable/call"
+        android:drawableEnd="@drawable/foreign"
+        android:drawablePadding="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/gedung_lppmp"
+        app:layout_constraintStart_toStartOf="@+id/logo"
+        app:layout_constraintEnd_toEndOf="@+id/logo"
+        app:layout_constraintBottom_toTopOf="@+id/t2"/>
+
+    <TextView
+        android:id="@+id/t2"
+        style="@style/normalFontWhite"
+        android:text="@string/T2"
+
+        android:layout_width="0dp"
+
+        android:textStyle="normal"
+        android:layout_marginTop="10dp"
+        android:drawableStart="@drawable/call_tinted"
+        android:drawableEnd="@drawable/foreign"
+        android:drawablePadding="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/t1"
+        app:layout_constraintStart_toStartOf="@+id/logo"
+        app:layout_constraintEnd_toEndOf="@+id/logo"
+        app:layout_constraintBottom_toTopOf="@+id/faxs"/>
+
+    <TextView
+        android:id="@+id/faxs"
+        style="@style/normalFontWhite"
+        android:text="@string/fax"
+
+        android:textStyle="normal"
+        android:layout_marginTop="10dp"
+        android:drawableStart="@drawable/fax"
+        android:drawablePadding="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/t2"
+        app:layout_constraintStart_toStartOf="@+id/logo"
+        app:layout_constraintBottom_toTopOf="@+id/website"/>
+
+    <TextView
+        android:id="@+id/website"
+        style="@style/normalFontWhite"
+        android:text="@string/ppkacid"
+
+        android:layout_width="0dp"
+        android:textStyle="normal"
+        android:layout_marginTop="10dp"
+        android:drawableStart="@drawable/globe"
+        android:drawableEnd="@drawable/foreign"
+        android:drawablePadding="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/faxs"
+        app:layout_constraintStart_toStartOf="@+id/logo"
+        app:layout_constraintEnd_toEndOf="@+id/logo"
+        app:layout_constraintBottom_toTopOf="@+id/email_ppk"/>
+
+    <TextView
+        android:id="@+id/email_ppk"
+        style="@style/normalFontWhite"
+        android:text="@string/email_ppk"
+
+        android:layout_width="0dp"
+        android:textStyle="normal"
+        android:layout_marginTop="10dp"
+        android:drawableStart="@drawable/envelope"
+        android:drawableEnd="@drawable/foreign"
+        android:drawablePadding="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/website"
+        app:layout_constraintStart_toStartOf="@+id/logo"
+        app:layout_constraintEnd_toEndOf="@+id/logo"
+        app:layout_constraintBottom_toTopOf="@+id/fb_ppk"/>
+
+    <TextView
+        android:id="@+id/fb_ppk"
+        style="@style/normalFontWhite"
+        android:text="@string/facebook_ppkuny"
+
+        android:layout_width="0dp"
+        android:textStyle="normal"
+        android:layout_marginTop="10dp"
+        android:drawableStart="@drawable/facebook_logo_about"
+        android:drawableEnd="@drawable/foreign"
+        android:drawablePadding="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/email_ppk"
+        app:layout_constraintStart_toStartOf="@+id/logo"
+        app:layout_constraintEnd_toEndOf="@+id/logo"
+        app:layout_constraintBottom_toTopOf="@+id/twitter_ppk"/>
+
+    <TextView
+        android:id="@+id/twitter_ppk"
+        style="@style/normalFontWhite"
+        android:text="@string/twitter_ppkuny"
+        android:layout_width="0dp"
+
+        android:textStyle="normal"
+        android:layout_marginTop="10dp"
+        android:drawableStart="@drawable/twitter"
+        android:drawableEnd="@drawable/foreign"
+        android:drawablePadding="5dp"
+        app:layout_constraintVertical_weight="0"
+        app:layout_constraintTop_toBottomOf="@+id/fb_ppk"
+        app:layout_constraintStart_toStartOf="@+id/logo"
+        app:layout_constraintEnd_toEndOf="@+id/logo"
+        app:layout_constraintBottom_toTopOf="@+id/instagram_ppk"/>
+
+    <TextView
+        android:id="@+id/instagram_ppk"
+        style="@style/normalFontWhite"
+        android:text="@string/instagram_ppkuny"
+
+        android:layout_width="0dp"
+        android:textStyle="normal"
+        android:layout_marginTop="10dp"
+        android:drawableStart="@drawable/instagram"
+        android:drawableEnd="@drawable/foreign"
+        android:drawablePadding="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/twitter_ppk"
+        app:layout_constraintStart_toStartOf="@+id/logo"
+        app:layout_constraintEnd_toEndOf="@+id/logo"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/ppk_version"
+        style="@style/normalFontWhite"
+        android:text="@string/ppk_version"
+
+        android:textStyle="normal"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/twitter_ppk"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

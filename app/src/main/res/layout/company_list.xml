@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="8dp"
+    card_view:cardCornerRadius="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/company_logo"
+            android:contentDescription="@string/company_logo"
+            android:layout_width="@dimen/companyLogoSide"
+            android:layout_height="@dimen/companyLogoSide"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/company_name"
+            style="@style/bigFontBaseColor"
+            android:layout_width="0dp"
+            android:layout_marginStart="10dp"
+            android:text="Company Name"
+
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/company_logo"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <TextView
+            android:id="@+id/company_description"
+            style="@style/normalFontBaseColor"
+            android:layout_width="0dp"
+            android:layout_marginStart="10dp"
+            android:visibility="gone"
+            android:layout_marginTop="5dp"
+
+            app:layout_constraintTop_toBottomOf="@+id/company_name"
+            app:layout_constraintStart_toEndOf="@+id/company_logo"
+            app:layout_constraintEnd_toEndOf="parent" />
+            <!--app:layout_constraintEnd_toStartOf="@+id/jumlah_lowongan"-->
+
+
+        <TextView
+            android:id="@+id/company_address"
+            android:layout_width="0dp"
+            style="@style/normalFontBaseColor"
+            android:layout_marginStart="10dp"
+            android:text="Company Address"
+            android:layout_marginTop="5dp"
+
+            app:layout_constraintTop_toBottomOf="@+id/company_name"
+            app:layout_constraintStart_toEndOf="@+id/company_logo"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/company_email"
+            style="@style/normalFontBaseColor"
+            android:layout_width="0dp"
+            android:layout_marginStart="10dp"
+            android:text="Company Email"
+            android:layout_marginTop="5dp"
+
+            app:layout_constraintTop_toBottomOf="@+id/company_address"
+            app:layout_constraintStart_toEndOf="@+id/company_logo"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+        <Button
+            android:id="@+id/company_website"
+            style="@style/normalFontWhite"
+            android:background="@drawable/button_selector"
+            android:layout_marginStart="10dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:padding="3dp"
+            android:text="Company Website"
+            android:layout_marginTop="5dp"
+            android:visibility="visible"
+
+
+            app:layout_constraintTop_toBottomOf="@+id/company_email"
+            app:layout_constraintStart_toEndOf="@+id/company_logo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

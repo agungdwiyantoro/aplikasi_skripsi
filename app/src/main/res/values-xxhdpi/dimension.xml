@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fab_hor_margin">16dp</dimen>
+    <dimen name="fab_ver_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="global_padding">16dp</dimen>
+    <dimen name="thumbnail_size">36dp</dimen>
+
+
+
+
+    <dimen name="loginEditTextWidth">265.64dp</dimen>
+    <dimen name="loginEditTextHeight">32.67dp</dimen>
+    <dimen name="loginWithLayout_width">173dp</dimen>
+    <dimen name="loginWithLayout_height">94dp</dimen>
+
+    <dimen name="companyLogoSide">93.33dp</dimen>
+
+
+    <dimen name="barHeight">48.33dp</dimen>
+</resources>

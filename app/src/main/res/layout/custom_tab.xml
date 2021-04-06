@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:baselineAligned="false"
+    android:background="@color/black">
+
+
+
+    <TextView
+        android:id="@+id/find_job"
+        style="@style/customTabTextSize"
+        android:text="@string/findJobs"
+        android:drawableTop="@drawable/find_job_tab"/>
+
+    <TextView
+        android:id="@+id/my_job"
+        style="@style/customTabTextSize"
+        android:text="@string/myJobs"
+        android:drawableTop="@drawable/my_job_tab"/>
+
+    <TextView
+        android:id="@+id/information"
+        style="@style/customTabTextSize"
+        android:text="@string/information"
+        android:maxLines="1"
+        android:drawableTop="@drawable/information_tab"/>
+
+    <TextView
+        android:id="@+id/my_profile"
+        style="@style/customTabTextSize"
+        android:text="@string/my_profile"
+        android:drawableTop="@drawable/profile_tab"/>
+
+
+</LinearLayout>

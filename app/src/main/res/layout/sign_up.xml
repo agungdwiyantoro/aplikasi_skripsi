@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/linear_layout">
+
+    <include layout="@layout/toolbar"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/logo_sign_up"
+            android:contentDescription="@string/sign_up_iv_desc"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2"/>
+
+
+        <TextView
+            android:id="@+id/pesan0"
+            style="@style/normalFontBaseColor"
+            android:layout_marginTop="10dp"
+            android:text="@string/su_pesan0"
+            android:textAlignment="center"
+            android:layout_width="0dp"
+
+            app:layout_constraintEnd_toEndOf="@id/wrapper"
+            app:layout_constraintStart_toStartOf="@id/wrapper"
+            app:layout_constraintTop_toBottomOf="@+id/image" />
+
+        <LinearLayout
+            android:id="@+id/wrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/wrapper"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pesan0">
+
+            <EditText
+                android:id="@+id/email_address"
+                style="@style/editTextEmail" />
+
+            <EditText
+                android:id="@+id/password"
+                style="@style/editTextPassword"
+                android:layout_marginTop="10dp"/>
+
+            <Button
+                android:id="@+id/bt_create"
+                style="@style/ButtonFont"
+                android:layout_width="match_parent"
+                android:background="@drawable/button_selector"
+                android:layout_marginTop="20dp"
+                android:text="@string/sign_up"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+
+
+
+
+        <TextView
+            android:id="@+id/tv_already_a_user"
+            style="@style/normalFontBaseColor"
+            android:text="@string/already_a_user"
+            android:layout_marginTop="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onClick"
+            app:layout_constraintTop_toBottomOf="@+id/wrapper"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

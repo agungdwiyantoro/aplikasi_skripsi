@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.45"
+        android:src="@drawable/checked_heart_logo" />
+
+    <TextView
+        android:id="@+id/pesan1"
+        style="@style/normalFontBaseColor"
+        android:text="@string/pesan1"
+        android:layout_marginTop="10dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/daftar"
+        style="@style/normalFontBaseColor"
+        android:text="@string/sign_up"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@+id/pesan1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/pesan3" />
+
+    <TextView
+        android:id="@+id/pesan3"
+        style="@style/normalFontBaseColor"
+        android:text="@string/or"
+        app:layout_constraintTop_toBottomOf="@+id/pesan1"
+        app:layout_constraintStart_toEndOf="@id/daftar"
+        app:layout_constraintEnd_toStartOf="@+id/masuk" />
+
+    <TextView
+        android:id="@+id/masuk"
+        style="@style/normalFontBaseColor"
+        android:text="@string/login"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:focusable="true"
+
+        app:layout_constraintTop_toBottomOf="@+id/pesan1"
+        app:layout_constraintStart_toEndOf="@+id/pesan3"
+        app:layout_constraintEnd_toStartOf="@+id/pesan5" />
+
+    <TextView
+        android:id="@+id/pesan5"
+        style="@style/normalFontBaseColor"
+        android:text="@string/pesan5"
+        app:layout_constraintTop_toBottomOf="@+id/pesan1"
+        app:layout_constraintStart_toEndOf="@+id/masuk"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

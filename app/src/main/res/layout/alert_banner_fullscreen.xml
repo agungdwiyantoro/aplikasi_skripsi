@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<com.github.rongi.rotate_layout.layout.RotateLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:angle="90">	<!-- Specify rotate angle here -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_fullscreen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+
+        <Button
+            android:id="@+id/bt_x"
+            style="@style/ButtonX"
+            android:layout_gravity="end"
+            android:layout_marginEnd="10dp"/>
+
+    </FrameLayout>
+
+</com.github.rongi.rotate_layout.layout.RotateLayout>
+
+
+

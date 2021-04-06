@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="list_divider">#949494</color>
+
+    <color name="white">#ffffff</color>
+    <color name="yellow">#eae305</color>
+    <color name="yellowDark">#B19C11</color>
+    <color name="black">#000000</color>
+    <color name="gray">#cca7a79e</color>
+    <color name="light_gray">#56DFDDDD</color>
+
+    <color name="red">#FF0000</color>
+
+    <color name="greenbluishcolor">#1ab394</color>
+    <color name="green">#12DB09</color>
+    <color name="pelamar">#0777A3</color>
+
+    <color name="dbx_white_opaque_100">#FFFFFFFF</color>
+    <color name="dbx_primary">#FF007EE5</color>
+    <color name="dbx_primary_dark">#FF0078d9</color>
+    <color name="dbx_color_control_normal">@color/dbx_primary</color>
+    <color name="dbx_color_control_activated">@color/dbx_primary</color>
+    <color name="dbx_color_control_highlight">@color/dbx_primary_dark</color>
+    <color name="dbx_color_switch_thumbNormal">@color/dbx_primary</color>
+
+    <color name="base_color">#069fd2</color>
+    <color name="button_color">#035A77</color>
+    <color name="login_with_color">#76bfd7</color>
+
+    <color name="test">#0000</color>
+</resources>

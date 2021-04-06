@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include layout="@layout/toolbar" android:id="@+id/toolbar" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/wrapper"
+            android:background="@drawable/wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/normalFontWhite"
+                android:text="@string/full_name"
+
+                android:paddingTop="10dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_full_name"
+                style="@style/editText"
+                android:hint="@string/et_full_name"
+                android:inputType="textPersonName"
+                android:imeOptions="actionNext"
+
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+            <TextView
+                android:id="@+id/tv_birth_place"
+                style="@style/normalFontWhite"
+                android:text="@string/birth_place"
+
+                android:paddingTop="10dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_full_name" />
+
+            <EditText
+                android:id="@+id/et_birth_place"
+                style="@style/editText"
+                android:hint="@string/birth_place"
+                android:inputType="textPersonName"
+                android:imeOptions="actionNext"
+
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_birth_place" />
+
+            <TextView
+                android:id="@+id/tv_birth_date"
+                style="@style/normalFontWhite"
+                android:text="@string/birth_date"
+
+                android:paddingTop="10dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_birth_place" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                style="@style/bigFontWhite"
+                android:text="@string/birth_date"
+
+                android:paddingTop="10dp"
+
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_birth_date" />
+
+            <!--
+            <Button
+                android:id="@+id/bt_birth_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pick_date"
+
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_birth_date"/>
+            -->
+
+            <EditText
+                android:id="@+id/et_birth_date"
+                style="@style/editText"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:hint="@string/ddmmyyyy"
+                android:textSize="20sp"
+
+
+                android:padding="5dp"
+                android:paddingEnd="10dp"
+                android:imeOptions="actionDone"
+
+                android:inputType="date"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_birth_date"
+                tools:ignore="TextFields" />
+
+            <TextView
+                android:id="@+id/tv_email"
+                style="@style/normalFontWhite"
+                android:text="@string/email"
+
+                android:layout_marginTop="20dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_birth_date" />
+
+
+            <EditText
+                android:id="@+id/et_email"
+                style="@style/editTextEmail"
+                android:layout_width="match_parent"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:imeOptions="actionNext"
+                android:enabled="false"
+
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_email" />
+
+            <TextView
+                android:id="@+id/tv_phone_number"
+                style="@style/normalFontWhite"
+                android:text="@string/phone_number"
+
+                android:layout_marginTop="20dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_email" />
+
+
+            <EditText
+                android:id="@+id/et_phone_number"
+                style="@style/editText"
+                android:hint="@string/et_phone_number"
+                android:inputType="phone|number"
+                android:imeOptions="actionDone"
+
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_phone_number" />
+
+            <TextView
+                android:id="@+id/tv_jenis_kelammin"
+                style="@style/normalFontWhite"
+                android:text="@string/sex"
+
+                android:layout_marginTop="20dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_phone_number" />
+
+            <RadioGroup
+                android:id="@+id/rb_jenis_kelammin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_jenis_kelammin">
+
+                <RadioButton
+                    android:id="@+id/laki"
+                    style="@style/normalFontWhite"
+                    android:text="@string/male"
+                    android:drawablePadding="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:id="@+id/perempuan"
+                    style="@style/normalFontWhite"
+                    android:text="@string/female"
+                    android:drawablePadding="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_cv_resume"
+                style="@style/normalFontWhite"
+                android:text="@string/supporting_files"
+
+                android:layout_marginTop="20dp"
+                android:paddingBottom="5dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rb_jenis_kelammin" />
+
+
+            <Button
+                android:id="@+id/bt_upload_files"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/choose"
+
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_cv_resume"/>
+
+            <ImageView
+                android:id="@+id/iv_document"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/document_icon"
+                android:contentDescription="@string/iv_document"
+
+                android:visibility="invisible"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_cv_resume" />
+
+
+            <TextView
+                android:id="@+id/tv_file_name"
+                style="@style/normalFontWhite"
+                android:text="@string/fileName"
+                android:layout_width="0dp"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:layout_marginStart="5dp"
+
+                android:visibility="invisible"
+
+                app:layout_constraintStart_toEndOf="@+id/iv_document"
+                app:layout_constraintEnd_toStartOf="@+id/bt_x"
+                app:layout_constraintTop_toBottomOf="@+id/tv_cv_resume" />
+
+            <TextView
+                android:id="@+id/tv_file_date"
+                style="@style/normalFontWhite"
+                android:layout_marginStart="5dp"
+
+                android:visibility="invisible"
+
+                app:layout_constraintStart_toEndOf="@+id/iv_document"
+                app:layout_constraintTop_toBottomOf="@+id/tv_file_name"/>
+
+            <!--
+            <TextView
+                android:id="@+id/tv_preview"
+                style="@style/normalFontWhite"
+                android:text="@string/preview"
+                android:layout_marginStart="5dp"
+
+                app:layout_constraintStart_toEndOf="@+id/iv_document"
+                app:layout_constraintTop_toBottomOf="@+id/tv_file_date" />
+                -->
+
+            <Button
+                android:id="@+id/bt_x"
+                style="@style/ButtonX"
+                android:contentDescription="@string/iv_delete"
+
+                android:visibility="invisible"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_cv_resume"
+                app:layout_constraintBottom_toBottomOf="@id/iv_document"/>
+
+            <Button
+                android:id="@+id/bt_save"
+                style="@style/ButtonFont"
+                android:background="@drawable/button_selector"
+                android:text="@string/save"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_document"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</LinearLayout>

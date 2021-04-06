@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector  xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true">
+        <bitmap android:src="@drawable/quick_apply" android:tint="@color/login_with_color"/>
+    </item>
+
+    <item android:drawable="@drawable/quick_apply"/>
+
+</selector>
